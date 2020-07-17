@@ -23,32 +23,34 @@ console.log(woodResult);
 
 //brickCaclulator
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function brickCalc(floor){
+var firstTen = 15000*10;
+var secondTen = firstTen + (12000*10);
+var brick;
+if(floor<=10){
+return brick = floor*15000;
+}
+else if(floor<=20){
+return brick = ((floor-10)*12000+ firstTen) ;
+}
+else{
+return brick = ((floor-20)*10000+ secondTen );
+}
+}
+var total = brickCalc();
+console.log(total);
 
 
 //tinyFriend
-
-var friends =['jon','robo','brandon','eddard'];
-var tiny = friends[0];
-for(var i=0;i<friends.length;i++){
-    var element = friends[i];
-    var tinyFriend=element[i].length;
-    if(tinyFriend<tiny){
-        tiny = tinyFriend;
+function tinyFriend(names){
+var tinyName = names[0];
+for(var i=0;i<names.length;i++){
+    var newName = names[i];
+    if(newName.length< tinyName.length){
+    tinyName = newName;
     }
-}
-
-console.log(tiny);  
+    }
+    return newName;
+    }
+    var tinyName= tinyFriend([])
+    console.log(tinyName);
